@@ -1,4 +1,4 @@
-FROM nodered/node-red:latest-12
+FROM docker.pkg.github.com/mineduino/tutorialsandexamples/nodered:squash
 
 USER root
 RUN apk update && apk add --no-cache mosquitto
