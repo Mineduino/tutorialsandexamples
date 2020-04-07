@@ -1,3 +1,6 @@
 build:
     docker:
         web: self-hosted-heroku/Dockerfile
+
+run:
+    web: /entrypoint.sh
