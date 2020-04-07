@@ -1,0 +1,7 @@
+{
+  "name": "Mineduino set",
+  "description": "A Mineduino self-hosted nodered and MQTT",
+  "repository": "https://github.com/Mineduino/tutorialsandexamples.git",
+  "logo": "https://mineduino.eu/wp-content/uploads/2019/12/login4-1.png",
+  "keywords": ["nodered", "mqtt", "mineduino"]
+}

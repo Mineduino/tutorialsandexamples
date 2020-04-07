@@ -1,0 +1,13 @@
+version: '3'
+services:
+    nodered:
+        image: nodered/node-red:latest-12
+        ports:
+          - "1880:1880"
+        restart: always
+    broker:
+        image: docker.pkg.github.com/mineduino/standardbroker/broker:master
+        ports:
+          - "1883:1883"
+          - "9001:9001"
+        restart: always
