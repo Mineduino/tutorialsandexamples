@@ -1,0 +1,27 @@
+server {
+  listen PORTTOCHANGE default_server;
+
+  location / {
+        proxy_set_header Host $host;
+	proxy_set_header X-Real-IP $remote_addr;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_buffering off;
+	proxy_pass http://127.0.0.1:1880/;
+        auth_basic "Nodered realm";
+        auth_basic_user_file /pass/nginx;
+  }
+
+  location /broker {
+        proxy_set_header Host $host;
+	proxy_set_header X-Real-IP $remote_addr;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_buffering off;
+	proxy_pass http://127.0.0.1:9001/;
+  }
+}
