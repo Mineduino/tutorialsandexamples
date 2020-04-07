@@ -4,9 +4,9 @@ USER root
 RUN apk update && apk add --no-cache mosquitto
 COPY mosquitto.conf /mosquitto/config/mosquitto.conf
 
-USER node-red
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
+USER node-red
 ENTRYPOINT ["/entypoint.sh"]
 
 
