@@ -1,0 +1,74 @@
+[
+    {
+        "id": "555d1473.64bb1c",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "8b8158e9.c94e28",
+        "type": "exec",
+        "z": "555d1473.64bb1c",
+        "command": "changepassword admin admin123",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "",
+        "oldrc": false,
+        "name": "",
+        "x": 570,
+        "y": 320,
+        "wires": [
+            [
+                "9cb31eb0.58d85"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b4aa56d5.383fa8",
+        "type": "inject",
+        "z": "555d1473.64bb1c",
+        "name": "",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 280,
+        "y": 320,
+        "wires": [
+            [
+                "8b8158e9.c94e28"
+            ]
+        ]
+    },
+    {
+        "id": "9cb31eb0.58d85",
+        "type": "debug",
+        "z": "555d1473.64bb1c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 880,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "5ed8fb7d.4e5ed4",
+        "type": "comment",
+        "z": "555d1473.64bb1c",
+        "name": "Hint",
+        "info": "Double click here and change admin / admin123 to corresponding user and password :)",
+        "x": 490,
+        "y": 280,
+        "wires": []
+    }
+]
